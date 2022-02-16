@@ -92,21 +92,40 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  
-}
+  var sum = 0
+  for( var i = 0; i < resultadosTest.length; i++){
+  sum = sum + resultadosTest[i]
+  }
+  var promedio = sum / resultadosTest.length
+  return promedio
+}  
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var masGrande = numeros[0]
+  for(i = 0; i < numeros.length; i++){
+    if(numeros[i] > masGrande)
+      masGrande = numeros[i]
+  } return masGrande
 }
-
+  
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  var multiplicar = 0
+  if ( arguments === 0){
+    return 0 
+  } else if(arguments === 1){
+    return arguments[0]
+  } for(var i = 0; i < arguments.length; i++){
+    multiplicar *= arguments[i]
+  }
+  return multiplicar 
 }
 
 
